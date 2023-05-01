@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("https://img.freepik.com/free-vector/aerial-view-plants-rocks_1308-31916.jpg") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    
+}
+.score{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+p{
+   font-size: 18px;
+}
+.start{
+    background-color: red;
+    padding: 20px;
+    width: 600px;
+    height: 65px;
+    position: absolute;
+    /* move from left and from top */
+    margin-left: 26vw; 
+    margin-top: 32px;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+/* here we have given start container positn absolute so it will be removed from normal document flow it's space
+   will be taken by game container we will give z-index to start container to bring it at top */
+.game{
+    width: 400px;
+    height: 90vh;
+    background-color: black;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.hide{
+    display: none;
+}
+
+.car, .enemy{
+    background: url("./imges/car2.png") no-repeat;
+    background-size: 100% 100%;  
+    /* place car at bottom of game area */
+    position: absolute;
+    background-color: red;
+    height: 90px;
+    width: 50px;
+    bottom: 120px;
+    z-index: 1;
+}
+
+.line{
+    background-color: white;
+    height: 90px;
+    width: 10px;
+    /* in absolute position will take wrt parent in this wrt game container */
+    position: absolute;
+    left: 48%;
+}
+
+/* .Opponents {
+    background: url("./imges/white\ car.png") no-repeat;
+    background-size: contain;
+    height: 100px;
+    width: 50px;
+    position: absolute;
+} */
+.container{
+    width:100%;
+    height:100vh;
+}
